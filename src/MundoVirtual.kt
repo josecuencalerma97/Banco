@@ -21,6 +21,7 @@ fun main(){
 
         //Retirar
         println(usuarios.cuenta.retirar(60.0))
+        println(usuarios.cuenta.retirar(40.0))
 
         //Ver fondos
         println(usuarios.cuenta.obtenerFondos())
