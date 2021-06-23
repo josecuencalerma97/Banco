@@ -17,6 +17,7 @@ fun main(){
         //Depositar
         println(usuarios.cuenta.depositar(100.0))
         println(usuarios.cuenta.depositar(50.0))
+        println(usuarios.cuenta.depositar(70.0))
 
         //Retirar
         println(usuarios.cuenta.retirar(60.0))
