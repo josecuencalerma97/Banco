@@ -1,0 +1,1 @@
+data class Persona(var nombre:String, var email: String, var contrasena: String)
