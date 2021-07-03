@@ -10,13 +10,13 @@ class Texto: Idiomas {
         //Cargar textos en español
         texto["es"] = mutableMapOf(
                 "saludo" to "!Bienvenidos a La Poderosisima App Fintech!",
-                "logInInstruccion" to "Ingresa tu Correo y Contraseña. Para salir Ingresa: <>",
+                "logInInstruccion" to "Ingresa tu Correo y Contraseña. Para salir Ingresa: $salida",
                 "logInCorreo" to "Correo: ",
                 "logInContrasena" to "Contraseña: ",
                 "logInError" to "El correo/contrasena no coinciden",
                 "logInOk" to "¡Bienvenido! Disfruta de la App.\n",
                 "graciasSalida" to "\n\nNos vemos pronto\n",
-                "menu" to "Ingrese la operación que desea realizar:\n1.Consultar Saldo\n2.Depositar\n3.Retirar\nIngrese <> para salir",
+                "menu" to "Ingrese la operación que desea realizar:\n1.Consultar Saldo\n2.Depositar\n3.Retirar\nIngrese $salida para salir",
                 "bancaError" to "¡Operación Incorrecta!\n",
                 "bancaSaldo" to "\n*****Tus fondos son %.2f pesos*****\n",
                 "bancaDeposito" to "\n¿Cuánto Desea Depositar?\nMonto: ",
@@ -37,6 +37,7 @@ class Texto: Idiomas {
 
     companion object{
         var LNG = "es"
+        val salida = "<>"
         var texto = Texto()
     }
 

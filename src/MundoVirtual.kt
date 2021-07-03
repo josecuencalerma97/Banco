@@ -45,5 +45,5 @@ fun main(){
 }
 
 fun isSalir(texto:String): Boolean{
-    return texto == "<>"
+    return texto == Texto.salida
 }
