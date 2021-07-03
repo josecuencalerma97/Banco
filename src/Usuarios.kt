@@ -7,15 +7,17 @@ class Usuarios{
             Persona("Josue Alejandro","josue@alejandro.com","123"))
 
     private lateinit var usuario: Persona
-    lateinit var cuenta: Cuenta
+    lateinit var banca: OperacionesBancarias
+    var isLogIn = false
 
-    fun logIn(email:String,contrasena:String): String{
-        var resp = "El correo/contrasena no coinciden";
+    fun logIn(email:String,contrasena:String): String?{
+        var resp = Texto.texto.getTexto("logInError")
         for(usuario in usuarios){
             if(usuario.email == email && usuario.contrasena == contrasena){
-                resp = "LogIn Exitoso"
+                resp = Texto.texto.getTexto("logInOk")
+                this.isLogIn = true
                 this.usuario = usuario
-                this.cuenta = Cuenta(this.usuario.email)
+                this.banca = OperacionesBancarias(this.usuario.email)
                 break
             }
         }
